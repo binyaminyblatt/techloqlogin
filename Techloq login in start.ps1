@@ -94,4 +94,4 @@ Process {
 }
 }
 
-New-Shortcut -Path "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Teckloq Login.url"  -TargetPath "https://block.techloq.com" -Icon "https://raw.githubusercontent.com/binyaminyblatt/techloqlogin/master/Binyamin%20Blatt.ico"
+New-Shortcut -Path "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Teckloq Login"  -TargetPath "https://block.techloq.com" -Icon "https://raw.githubusercontent.com/binyaminyblatt/techloqlogin/master/Binyamin%20Blatt.ico"
