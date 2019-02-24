@@ -101,4 +101,5 @@ if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
   Exit
  }
 }
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Force -Scope Process
 New-Shortcut -Path "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Teckloq Login"  -TargetPath "https://block.techloq.com" -Icon "https://raw.githubusercontent.com/binyaminyblatt/techloqlogin/master/Binyamin%20Blatt.ico"
