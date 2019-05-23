@@ -1,0 +1,40 @@
+
+
+
+
+Invoke-WebRequest -Uri "https://block.techloq.com/Home/Logout" -UseBasicParsing -UseDefaultCredentials
+
+
+
+
+
+function Techloq-Login {
+  [cmdletbinding(login)]
+  param(
+    [Parameter(Mandatory = $true,
+    ParameterSetName = "Todo")]
+    [String[]]
+    $Todo
+)
+ DynamicParam {
+ if ($todo -eq "login"){
+
+         $ageAttribute = New-Object System.Management.Automation.ParameterAttribute
+         $ageAttribute.Mandatory = $true
+         $ageAttribute.HelpMessage = "Please enter your age:"
+         $attributeCollection = New-Object System.Collections.ObjectModel.Collection[System.Attribute]
+         $attributeCollection.Add($ageAttribute)
+         $ageParam = New-Object System.Management.Automation.RuntimeDefinedParameter('age', [Int16], $attributeCollection)
+         $paramDictionary = New-Object System.Management.Automation.RuntimeDefinedParameterDictionary
+         $paramDictionary.Add('age', $ageParam)
+         return $paramDictionary
+
+$logout = Invoke-WebRequest -Uri "https://block.techloq.com/Home/Logout" -UseBasicParsing -UseDefaultCredentials| 
+$logmein = Invoke-WebRequest -Uri "https://block.techloq.com/Home/Login" -Body "RedirectUrl=&UserName=$user&Password=$password&X-Requested-With=XMLHttpRequest" -UseBasicParsing -UseDefaultCredentials -Method "POST" | ConvertFrom-Json 
+
+
+
+
+
+}
+Techloq-login 
